@@ -1,13 +1,13 @@
-# Descrição
+## Descrição
 Exemplo de uma suite de testes de integraçao com banco de dados utilizando Docker.
 
-# Dependências Utilizadas
+## Dependências Utilizadas
 - [Bogus](https://github.com/bchavez/Bogus)
 - [FluentAssertions](https://github.com/fluentassertions/fluentassertions)
 - [Microsoft.AspNetCore.Mvc.Testing](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Testing)
 - [xunit](https://xunit.net/)
 
-# Diagrama de Classes
+## Diagrama de Classes
 ![Class Diagram](Class-Diagram.png)
 
 ## SUT
