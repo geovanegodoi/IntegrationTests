@@ -1,9 +1,21 @@
 ## IntegrationTestsFixture
-Classe compartilhada por todas as suítes de testes de integração, ela fornece acesso a quatro recursos compartilhados pelos testes.
+Classe compartilhada por todas as suítes de testes de integração, ela fornece acesso aos recursos compartilhados pelos testes.
+
+```csharp
+public class IntegrationTestsFixture : IDisposable
+{
+    public WebAppFactory<StartupClass> Factory { get; }
+    public HttpClient Client { get; }
+    public DatabaseContext DbContext { get; }
+    public void Dispose();
+}
+```
+
 Através da implementação da interface IClassFixture<T>, podemos injetar uma instancia da classe de fixture em nossa classe de testes.
 A instancia do fixture será criada antes da execução do primeiro teste e destruída ao final da execução do último teste.
 
 Exemplo de utilização por uma classe de teste :
+
 ```csharp
 public class IntegrationTestsExample : IClassFixture<IntegrationTestsFixture>
 {
